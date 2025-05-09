@@ -30,7 +30,6 @@ export const userController = {
         .on('data', (data) => results.push(data))
         .on('end', async () => {
           try {
-            console.log(results);
             const transformedData: IUserSave[] = results.map((item) => {
               return {
                 name: item.Name,
